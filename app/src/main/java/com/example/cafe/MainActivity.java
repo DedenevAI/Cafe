@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     launchScreen(userName);
                 }
-
             }
         });
     }
@@ -47,8 +46,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void launchScreen(String userName) {
-        Intent intent = new Intent(MainActivity.this, MakeOrderActivity.class);
-        intent.putExtra("userName", userName);
+        Intent intent = MakeOrderActivity.newIntent(MainActivity.this,userName);
         startActivity(intent);
     }
 }
