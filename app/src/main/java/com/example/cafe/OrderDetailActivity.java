@@ -49,9 +49,10 @@ public class OrderDetailActivity extends AppCompatActivity {
     }
 
     private void setUpValues() {
-        textViewName.setText(getIntent().getStringExtra(EXTRA_USER_USERNAME));
-        textViewDrink.setText(getIntent().getStringExtra(EXTRA_USER_DRINK));
-        textViewDrinkType.setText(getIntent().getStringExtra(EXTRA_USER_DRINK_TYPE));
-        textViewAdditives.setText(getIntent().getStringExtra(EXTRA_USER_ADDITIVES));
+        Intent intent = getIntent();
+        textViewName.setText(intent.getStringExtra(EXTRA_USER_USERNAME));
+        textViewDrink.setText(intent.getStringExtra(EXTRA_USER_DRINK));
+        textViewDrinkType.setText(intent.getStringExtra(EXTRA_USER_DRINK_TYPE));
+        textViewAdditives.setText(intent.getStringExtra(EXTRA_USER_ADDITIVES));
     }
 }
